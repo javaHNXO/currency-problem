@@ -10,4 +10,3 @@ public class Currency_inf {
         System.out.println("exchange rate: "+ER+"|"+currency+" shekels");
     }
 }
-ya tupaya nigga
