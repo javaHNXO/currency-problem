@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
 public class Currency_inf {
+
     protected void Currency() {
+        
         String name;
         double currency;
         double ER;
-        System.out.println(currency+" "+name);
-        currency = currency * ER;
-        System.out.println("exchange rate: "+ER+"|"+currency+" shekels");
     }
 }
