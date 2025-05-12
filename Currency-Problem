@@ -1,19 +1,22 @@
 class Currency {
   String name; //объявляем переменные
-  int pricevss;
+  double pricevss;
   static String firstcurr, needcurr;
 
-  public Currency(String name, int pricevss) { //создаем конструктор
+  public Currency(String name, double pricevss) { //создаем конструктор
     this.name = name;
     this.pricevss = pricevss;
   }
 
   public static void currencies(){ //в этом методе салим сделает объекты валют на основе конструктора
-
+    Currency rend = new Currency("rend", 0.19);
+    Currency real = new Currency("real", 0.000085);
+    Currency tenge = new Currency("tenge", 0.007);  
+    Currency shekel = new Currency("shekel", 1);
   }
 
 
   public static void main(String[] args) { //в main ариэль напишет основной код(с моей хелпой)
-    
+
   }
 }
