@@ -1,6 +1,8 @@
+import java.util.Scanner;
+
 class Currency {
   String name; //объявляем переменные
-  double pricevss;
+  double pricevss, amount, result;
   static String firstcurr, needcurr;
 
   public Currency(String name, double pricevss) { //создаем конструктор
@@ -17,6 +19,11 @@ class Currency {
 
 
   public static void main(String[] args) { //в main ариэль напишет основной код(с моей хелпой)
-
+    Scanner scan = new Scanner(System.in);
+    System.out.println("What currency do you want to use?");
+    String name = scan.nextLine();
+    System.out.println("What is the amount of currency do you want to use?");
+    int amount = scan.nextInt();
+    }
   }
 }
