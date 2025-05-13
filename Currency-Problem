@@ -1,29 +1,36 @@
 import java.util.Scanner;
-
+import java.util.HashMap;
+import java.util.Map;
 class Currency {
   String name; //объявляем переменные
-  double pricevss, amount, result;
+  double pricevssh, result, amount;
   static String firstcurr, needcurr;
 
-  public Currency(String name, double pricevss) { //создаем конструктор
+  public Currency(String name, double pricevssh) { //создаем конструктор
     this.name = name;
-    this.pricevss = pricevss;
+    this.pricevssh = pricevssh;
   }
 
-  public static void currencies(){ //в этом методе салим сделает объекты валют на основе конструктора
-    Currency rend = new Currency("rend", 0.19);
-    Currency real = new Currency("real", 0.000085);
-    Currency tenge = new Currency("tenge", 0.007);  
-    Currency shekel = new Currency("shekel", 1);
-  }
-
-
-  public static void main(String[] args) { //в main ариэль напишет основной код(с моей хелпой)
+  public double hui(){
     Scanner scan = new Scanner(System.in);
-    System.out.println("What currency do you want to use?");
-    String name = scan.nextLine();
-    System.out.println("What is the amount of currency do you want to use?");
-    int amount = scan.nextInt(); 
+    amount = scan.nextDouble();
+    result = amount / this.pricevssh;
+    return result;
+  }
+
+  public static void main(String[] args) { //в main рома напишет основной код(с моей хелпой)
+    Scanner scan = new Scanner(System.in);
+    Map<String, Currency> currencies = new HashMap<>();
+    currencies.put("ZAR", new Currency("rend", 5.13));
+    currencies.put("IRR", new Currency("real", 11803.88));
+    currencies.put("KZT", new Currency("tenge", 143.15));  
+    currencies.put("NIS", new Currency("shekel", 1));
+    System.out.println("С какой валюты нужен перевод?");
+    String from = scan.nextLine();
+    System.out.println("В какую валюту нужен перевод?");
+    String to = scan.nextLine();
+    if(currencies.containsKey(from) && currencies.containsKey(to)){
+      System.out.println("pososi");
     }
   }
 }
