@@ -23,7 +23,7 @@ class Currency {
     System.out.println("What currency do you want to use?");
     String name = scan.nextLine();
     System.out.println("What is the amount of currency do you want to use?");
-    int amount = scan.nextInt();
+    int amount = scan.nextInt(); 
     }
   }
 }
