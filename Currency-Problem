@@ -1,29 +1,41 @@
 import java.util.Scanner;
 
 class Currency {
-  String name; //объявляем переменные
-  double pricevss, amount, result;
-  static String firstcurr, needcurr;
-
-  public Currency(String name, double pricevss) { //создаем конструктор
-    this.name = name;
-    this.pricevss = pricevss;
-  }
-
-  public static void currencies(){ //в этом методе салим сделает объекты валют на основе конструктора
-    Currency rend = new Currency("rend", 0.19);
-    Currency real = new Currency("real", 0.000085);
-    Currency tenge = new Currency("tenge", 0.007);  
-    Currency shekel = new Currency("shekel", 1);
-  }
-
-
-  public static void main(String[] args) { //в main ариэль напишет основной код(с моей хелпой)
-    Scanner scan = new Scanner(System.in);
-    System.out.println("What currency do you want to use?");
-    String name = scan.nextLine();
-    System.out.println("What is the amount of currency do you want to use?");
-    int amount = scan.nextInt(); 
+    // Currency information holder
+    String name;
+    double currencyAmount;
+    double ER;
+  
+    // methods to set the name, currency amount and the ER 
+    public void setName(String name) {
+      this.name = name;
+    }
+    public void setCurrencyAmount(double currencyAmount) {
+      this.currencyAmount = currencyAmount;
+    }
+    public void setER(double ER) {
+      this.ER = ER;
+    }
+  
+    // method to print all three values
+    public void printDetails() {
+      System.out.println(this.name);
+      System.out.println(this.currencyAmount);
+      System.out.println(this.ER);
     }
   }
-}
+  
+  public class Main {
+    public static void main(String[] args) {
+      // Creating an object of the class Currency
+      Currency obj = new Currency();
+  
+      // setting the values
+      obj.setName("dollars");
+      obj.setCurrencyAmount(1);
+      obj.setER(3.59);
+  
+      // Printing values
+      obj.printDetails();
+    }
+  }
